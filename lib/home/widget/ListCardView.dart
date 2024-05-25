@@ -71,15 +71,19 @@ class _ListCardViewState extends State<ListCardView> {
                           final className = widget.data["class"][index];
                           return SizedBox(
                             height: 60,
-                            child: ListTile(
-                              leading: const Icon(Icons.calendar_month),
-                              title: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("${className["className"]}"),
-                                  Text("${className["time"]}")
-                                ],
+                            child: InkWell(
+                              onTap: () {},
+                              child: ListTile(
+                                leading: const Icon(Icons.calendar_month),
+                                title: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("${className["className"]}"),
+                                    Text("${className["time"]}")
+                                  ],
+                                ),
+                                trailing: Icon(Icons.arrow_forward_ios),
                               ),
                             ),
                           );
