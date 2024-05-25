@@ -9,22 +9,12 @@ class listView extends GetView<ListViewController> {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("tt${controller.text.length}");
-
     return Scaffold(
       appBar: HomeAppBarWidget(),
       body: Obx(() => Center(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // InkWell(
-                //   child: Text("data"),
-                //   onTap: () {
-                //     controller.booltest =
-                //         controller.booltest.isTrue ? false.obs : true.obs;
-                //     debugPrint("${controller.booltest}");
-                //   },
-                // ),
                 Expanded(
                   child: SizedBox(
                     width: 330,
